@@ -1,0 +1,6 @@
+# Ignore Macbook Finder files
+.DS_Store
+
+# Ignore binaries created
+/target
+

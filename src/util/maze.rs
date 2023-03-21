@@ -298,9 +298,12 @@ impl Maze {
             // Maze Bottom Separator
             print!("⬛");
             for col in 0..self.num_columns {
-                match (&current_row[col].visit_status, &current_row[col].bottom_side) {
+                match (
+                    &current_row[col].visit_status,
+                    &current_row[col].bottom_side,
+                ) {
                     (VisitStatus::Visited, BottomBoundary::Open) => {
-                        if let VisitStatus::Visited = self.maze[row+1][col].visit_status {
+                        if let VisitStatus::Visited = self.maze[row + 1][col].visit_status {
                             print!("🟦⬛");
                         } else {
                             print!("⬜⬛");
